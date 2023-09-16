@@ -1,0 +1,142 @@
+﻿@using MasrafUygulamasi.MVC.Areas.Admin.ViewModels;
+@model ReportsVM
+<div class="card row shadow my-5">
+	<div class="card-header m-auto py-3">
+		<h6 class="m-0 font-weight-bold text-primary text-center">Total Expense Amounts On Personnel</h6>
+	</div>
+	<div class="card-body m-auto col-7">
+		<div class="chart-bar" id="AddingCharBar">
+			<canvas id="totalExpenseOnUser"></canvas>`
+		</div>
+		<hr>
+	</div>
+	<div class="card-header text-center py-3">
+		<h6 class="m-0 font-weight-bold text-primary text-center">Total Expense Amounts On Expense Type</h6>
+	</div>
+	<div class="card-body m-auto col-7">
+		<div class="chart-bar" id="AddingCharBar">
+			<canvas id="totalExpenseOnExpenseType"></canvas>`
+		</div>
+		<hr>
+	</div>
+</div>
+
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+		$(document).ready(function () {
+			var totalExpenseData = @Html.Raw(Json.Serialize(ViewBag.TotalExpenseData));
+
+			var ctx = document.getElementById('totalExpenseOnUser').getContext('2d');
+			var chart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.UserName)),
+					datasets: [
+						{
+							label: 'Total Expenses (₺)',
+							data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TotalPriceTl)),
+							backgroundColor: 'blue',
+						},
+						{
+							label: 'Total Expenses (€)',
+							data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TotalPriceEUR)),
+							backgroundColor: 'green',
+						},
+						{
+							label: 'Total Expenses ($)',
+							data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TotalPriceUSD)),
+							backgroundColor: 'orange',
+						}
+					]
+				},
+				options: {
+					layout: { 
+						padding: {
+							left: 10,
+							right: 25,
+							top: 25,
+							bottom: 0
+						}
+					},
+					scales: {
+						y: {
+							beginAtZero: true,
+							ticks: {
+								font: {
+									size: 20
+								}
+							}
+						},
+						x: {
+							beginAtZero: true,
+							ticks: {
+								font: {
+									size: 20
+								}
+							}
+						}
+					}
+				}
+			});
+		});
+		$(document).ready(function () {
+			var totalExpenseData = @Html.Raw(Json.Serialize(ViewBag.TotalExpenseData));
+
+			var ctx = document.getElementById('totalExpenseOnExpenseType').getContext('2d');
+			var chart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.ExpenseTypeName)),
+					datasets: [
+						{
+							label: 'Total Expenses (₺)',
+							data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TotalPriceTlForExpenseType)),
+							backgroundColor: 'blue',
+						},
+						{
+							label: 'Total Expenses (€)',
+							data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TotalPriceEURForExpenseType)),
+							backgroundColor: 'green',
+						},
+						{
+							label: 'Total Expenses ($)',
+							data: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TotalPriceUSDForExpenseType)),
+							backgroundColor: 'orange',
+						}
+					]
+				},
+				options: {
+					layout: {
+						padding: {
+							left: 10,
+							right: 25,
+							top: 25,
+							bottom: 0
+						}
+					},
+					scales: {
+						y: {
+							beginAtZero: true,
+							ticks: {
+								font: {
+									size: 20
+								}
+							}
+						},
+						x: {
+							beginAtZero: true,
+							ticks: {
+								font: {
+									size: 20
+								}
+							}
+						}
+					}
+				}
+			});
+		});
+	</script>
+}

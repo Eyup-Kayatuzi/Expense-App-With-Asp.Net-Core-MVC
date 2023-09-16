@@ -1,0 +1,174 @@
+﻿@using MasrafUygulamasi.MVC.Areas.Personnel.ViewModels;
+@model List<ListExpensesVM>
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<form asp-action="" method="post">
+			<div class="row d-flex justify-content-center">
+				<div class="col-12 d-flex mt-4">
+					<div class="me-2">
+						<label><strong>Expense Title</strong></label>
+						<br />
+						<input type="text" maxlength="50" id="titleFilterId" onkeyup="titleFilter(0, 'titleFilterId')" placeholder="Search for title names.." title="Type in a name" class="bg-gradient">
+					</div>
+					<div>
+						<label><strong>Status</strong></label>
+						<br />
+						<select id="statusFilterId" onchange="titleFilter(4, 'statusFilterId')" class="bg-gradient">
+							<option value=""></option>
+							<option value="Paid">Paid</option>
+							<option value="Approved">Approved</option>
+							<option value="Waiting">Waiting</option>
+							<option value="Denied">Denied</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-12 table-responsive">
+					<table id="generalTable" class="table table-success table-striped">
+						<thead>
+							<tr>
+								<th scope="col" class="">Expense Title</th>
+								<th scope="col" class="">Updated Date</th>
+								<th scope="col" class="">Expenses</th>
+								<th scope="col" class="">Total Price</th>
+								<th scope="col" class="">Status</th>
+								<th scope="col" class="">Manager Notes</th>
+							</tr>
+						</thead>
+						<tbody>
+							@{
+								foreach (var item in Model)
+								{
+									<tr>
+										<td class="">
+											<h5>
+												@item.ExpenseTitle
+											</h5>
+											<div class="row">
+												@{
+													if (@item.StatusName == "Waiting")
+													{
+
+														<div class="row">
+															<div class="col-lg-12 col-xl-6">
+																<a class="btn btn-success w-100" href="@Url.Action("UpdateFromList", "Main", new {id = item.ExpenseId, area = "Personnel"})">Edit</a>
+															</div>
+															<div class="col-lg-12  col-xl-6 mt-2 mt-xl-0">
+																<button class="btn btn-danger w-100" type="button" onclick="confirmDelete(@item.ExpenseId)">Delete</button>
+															</div>
+														</div>
+													}
+													else if (item.StatusName == "Denied")
+													{
+														<div class="row">
+															<div class="col-lg-12 col-xl-6">
+																<a class="btn btn-warning w-100" href="@Url.Action("UpdateFromList", "Main", new {id = item.ExpenseId, area = "Personnel"})">Edit</a>
+															</div>
+															<div class="col-lg-12  col-xl-6 mt-2 mt-xl-0">
+																<button class="btn btn-danger w-100" type="button" onclick="confirmDelete(@item.ExpenseId)">Delete</button>
+															</div>
+														</div>
+													}
+													else
+													{
+
+													}
+												}
+											</div>
+										</td>
+										<td>@item.UpdatedDate</td>
+										@*<td>
+
+								@{
+								foreach (var expenseName in item.ExpenseDetails)
+								{
+								<div>@expenseName </div>
+								}
+
+								}
+
+								<td>*@
+										<td>
+											<a class="" href="@Url.Action("FormDetails", "Main", new {id = item.ExpenseId, area = "Personnel"})">Click for detail</a>
+										</td>
+										<td>@item.TotalPrice@item.CurrencyName</td>
+										<td>@item.StatusName</td>
+									@{
+										if (item.ManagerDescription != null)
+										{
+												<td><textarea maxlength="50" rows="2" cols="15" disabled>@item.ManagerDescription</textarea></td>
+										}
+										else
+										{
+												<td></td>
+										}
+									}
+
+
+									</tr>
+
+								}
+							}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</form>
+
+	</div>
+</div>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+		@{
+			if (TempData["isDeleted"] != null)
+			{
+				<text>
+					alert(`An error occurred while deleting`);
+				</text>
+			}
+			if (TempData["isUpdated"] != null)
+			{
+				<text>
+					alert(`An error occurred while updating`);
+				</text>
+			}
+			if (TempData["UpdatedSuccess"] != null)
+			{
+				<text>
+					alert(`Success`);
+				</text>
+			}
+		}
+			function titleFilter(switchVal, IdName) {
+
+				var input, filter, table, tr, td, i, txtValue;
+				input = document.getElementById(IdName);
+				filter = input.value.toUpperCase();
+				table = document.getElementById("generalTable");
+				tr = table.getElementsByTagName("tr");
+				for (i = 0; i < tr.length; i++) {
+					td = tr[i].getElementsByTagName("td")[switchVal];
+					if (td) {
+						txtValue = td.textContent;
+						txtValue = txtValue.trim();
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						}
+						else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+			}
+		function confirmDelete(id) {
+			var result = confirm("Do you want to permanently delete the selected item?");
+			if (result) {
+				window.location.href = "/Personnel/Main/DeleteFromList/" + id;
+			}
+		}
+
+	</script>
+}

@@ -1,0 +1,33 @@
+﻿@using MasrafUygulamasi.Domain.Identity;
+@model AppIdentityUser
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<div class="d-flex justify-content-center">
+			<div class="text-center">
+				<h1>Hoşgeldin</h1>
+				<h2>@Model.FullName</h2>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+		@{
+			if (TempData["FromAddNewExpense"] != null)
+					{
+				<text>
+					alert(`Expense form successfully sent `);
+				</text>
+			}
+			if (TempData["FromAddNewExpense2"] != null)
+			{
+				<text>
+					alert(`You can't send empty form'`);
+				</text>
+			}
+		}
+	</script>
+}

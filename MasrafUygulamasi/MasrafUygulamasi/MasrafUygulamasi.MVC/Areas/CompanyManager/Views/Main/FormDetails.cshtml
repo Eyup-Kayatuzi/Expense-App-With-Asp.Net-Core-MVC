@@ -1,0 +1,106 @@
+﻿@*@using MasrafUygulamasi.MVC.Areas.CompanyManager.ViewModels;
+@model List<ExpenseDetailsVM>
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<div class="row d-flex justify-content-center">
+			<div class="col-12 mt-5">
+				<table class="table table-primary">
+					<thead>
+						<tr>
+							<th scope="col">ExpenseType</th>
+							<th scope="col">ExpenseDescription</th>
+							<th scope="col">Price</th>
+							<th scope="col">ExpenseDate</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									<input type="text" class="form-control" disabled value="@item.ExpenseTypes" />
+								</td>
+								<td>
+									<input type="text" class="form-control" disabled value="@item.ExpenseNotes" />
+								</td>
+								<td>
+									<input type="number" class="form-control" disabled value="@item.ExpensePrice" />
+								</td>
+
+								<td>
+									<input type="date" class="form-control" disabled value="@item.ExpenseDates" />
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</div>*@
+@using MasrafUygulamasi.MVC.Areas.Personnel.ViewModels;
+@model UpdateExpenseVM
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<div class="row d-flex justify-content-center">
+			<div class="col-6">
+				<div class="form-group">
+					<label >Currency</label>
+					<input type="text" class="form-control" disabled value="@Model.CurrencyType" />
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="form-group">
+					<label >Title</label>
+					<input type="text" class="form-control" disabled value="@Model.TitleName" />
+				</div>
+			</div>
+			<div class="col-12 mt-5">
+				<table id="expenseItemsTable" class="table table-primary">
+					<thead>
+						<tr>
+							<th scope="col">ExpenseType</th>
+							<th scope="col">ExpenseDescription</th>
+							<th scope="col">Price</th>
+							<th scope="col">ExpenseDate</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						@{
+							for (int i = 0; i < Model.ExpenseItems.Count; i++)
+
+							{
+								<tr>
+
+									<td>
+										<input type="text" class="form-control" disabled value="@Model.ExpenseItems[i].ExpenseType" />
+									</td>
+									<td>
+										<input type="text" class="form-control" disabled value="@Model.ExpenseItems[i].ExpenseDescription" />
+									</td>
+									<td>
+										<input type="text" class="form-control" disabled value="@Model.ExpenseItems[i].Price" />
+									</td>
+									<td>
+										<input  class="form-control" disabled value="@Model.ExpenseItems[i].ExpenseDate.Value.ToLongDateString()" />
+
+									</td>
+								</tr>
+							}
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+	</script>
+}

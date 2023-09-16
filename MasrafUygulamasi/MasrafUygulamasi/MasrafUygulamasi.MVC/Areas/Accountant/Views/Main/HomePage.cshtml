@@ -1,0 +1,20 @@
+﻿@using MasrafUygulamasi.Domain.Identity;
+@model AppIdentityUser
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<div class="d-flex justify-content-center">
+			<div class="text-center">
+				<h1>Hoşgeldin</h1>
+				<h2>@Model.FullName</h2>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+		
+	</script>
+}

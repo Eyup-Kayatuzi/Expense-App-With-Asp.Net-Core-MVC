@@ -1,0 +1,197 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MasrafUygulamasi.MVC
+build_property.RootNamespace = MasrafUygulamasi.MVC
+build_property.ProjectDir = C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.MVC\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.MVC
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/Main/FormDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xNYWluXEZvcm1EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/Main/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xNYWluXEhvbWVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/Main/PendingPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xNYWluXFBlbmRpbmdQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/Shared/_AccountantLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xTaGFyZWRcX0FjY291bnRhbnRMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Accountant/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWNjb3VudGFudFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Main/ExpenseSummary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFpblxFeHBlbnNlU3VtbWFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Main/FormDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFpblxGb3JtRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Main/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFpblxIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Main/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWFpblxSZXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/Main/FormDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcTWFpblxGb3JtRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/Main/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcTWFpblxIb21lUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/Main/PendingExpenses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcTWFpblxQZW5kaW5nRXhwZW5zZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/Shared/_ManagerLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcU2hhcmVkXF9NYW5hZ2VyTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/CompanyManager/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29tcGFueU1hbmFnZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Main/AddNewExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXE1haW5cQWRkTmV3RXhwZW5zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Main/FormDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXE1haW5cRm9ybURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Main/HomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXE1haW5cSG9tZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Main/ListExpenseForms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXE1haW5cTGlzdEV4cGVuc2VGb3Jtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Main/UpdateFromList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXE1haW5cVXBkYXRlRnJvbUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Shared/_PersonnelLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfUGVyc29ubmVsTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Areas/Personnel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGVyc29ubmVsXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/Shared/_AuthSignInLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoU2lnbkluTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/Shared/_SigninLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaWduaW5MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/UserAuthentication/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/UserAuthentication/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/eyup.kayatuzi/Desktop/MasrafUygulamasi/MasrafUygulamasi/MasrafUygulamasi.MVC/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

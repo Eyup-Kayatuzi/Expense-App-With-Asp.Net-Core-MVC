@@ -1,0 +1,105 @@
+﻿@using MasrafUygulamasi.MVC.Areas.Admin.ViewModels;
+@model List<ExpenseSummaryVM>
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<div class="row d-flex justify-content-center">
+			<div class="col-12 d-flex mt-4">
+				<div class="me-2">
+					<label><strong>Personnel Name</strong></label>
+					<br />
+					<input type="text" maxlength="50" id="titleFilterId" onkeyup="titleFilter(0, 'titleFilterId')" placeholder="Personnel name.." title="Type in a name" class="bg-gradient">
+				</div>
+				<div>
+					<label><strong>Status</strong></label>
+					<br />
+					<select id="titleFilterId2" onchange="titleFilter(3, 'titleFilterId2')" class="bg-gradient">
+						<option value=""></option>
+						<option value="Paid">Paid</option>
+						<option value="Approved">Approved</option>
+						<option value="Waiting">Waiting</option>
+						<option value="Denied">Denied</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-12 table-responsive">
+				<table id="generalTable" class="table table-bordered table-secondary table-striped">
+					<thead>
+						<tr>
+							<th scope="col" class="w-20">Personnel Name</th>
+							<th scope="col" class="w-25">Manager Name</th>
+							<th scope="col" class="w-30">Expense Forms</th>
+							<th scope="col" class="w-25">Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td><h5>@item.PersonnelName</h5></td>
+								<td><h5>@item.PersonnelManager</h5></td>
+								@*<td class="row">
+									<div class="mb-4 bg-primaryp-2 text-dark bg-opacity-50 "><h4 class="">@item.ExpenseTitle </h4><h5><u>@item.TotalPrice <span id="SearchCurencyType">@item.CurrencyName</span></u></h5></div>
+									@foreach (var expenseItem in item.ExpenseItemsList)
+									{
+										<div class="mb-3 col-md-6 col-lg-4">
+											<h5>@expenseItem.ExpenseTypes</h5>
+											@if (expenseItem.ExpenseNotes != null)
+											{
+												@expenseItem.ExpenseNotes
+
+												<br />
+											}
+											else
+											{
+
+											}
+											@expenseItem.ExpensePrice @item.CurrencyName
+											<br />
+											@expenseItem.ExpenseDates.ToShortDateString()
+										</div>
+									}
+								</td>*@
+								<td>
+									<div class="bg-primaryp-2 text-dark bg-opacity-50 "><h4 class="">@item.ExpenseTitle </h4><h5><u>@item.TotalPrice <span id="SearchCurencyType">@item.CurrencyName</span></u></h5></div>
+									<a class="" href="@Url.Action("FormDetails", "Main", new {id = item.ExpenseId, area = "Admin"})">Click for detail</a>
+								</td>
+								<td>
+									<p><h5>@item.ExpenseStatus</h5></p>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+		function titleFilter(switchVal, IdName) {
+
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById(IdName);
+			filter = input.value.toUpperCase();
+			table = document.getElementById("generalTable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[switchVal];
+				if (td) {
+					txtValue = td.textContent;
+					txtValue = txtValue.trim();
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					}
+					else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		}
+
+	</script>
+}

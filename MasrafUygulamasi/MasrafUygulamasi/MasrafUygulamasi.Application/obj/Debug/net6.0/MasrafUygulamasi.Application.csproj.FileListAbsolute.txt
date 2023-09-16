@@ -1,0 +1,15 @@
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\bin\Debug\net6.0\MasrafUygulamasi.Application.deps.json
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\bin\Debug\net6.0\MasrafUygulamasi.Application.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\bin\Debug\net6.0\MasrafUygulamasi.Application.pdb
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\bin\Debug\net6.0\MasrafUygulamasi.Domain.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\bin\Debug\net6.0\MasrafUygulamasi.Domain.pdb
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.csproj.AssemblyReference.cache
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.AssemblyInfoInputs.cache
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.AssemblyInfo.cs
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.csproj.CoreCompileInputs.cache
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.csproj.CopyComplete
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\refint\MasrafUygulamasi.Application.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\MasrafUygulamasi.Application.pdb
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Application\obj\Debug\net6.0\ref\MasrafUygulamasi.Application.dll

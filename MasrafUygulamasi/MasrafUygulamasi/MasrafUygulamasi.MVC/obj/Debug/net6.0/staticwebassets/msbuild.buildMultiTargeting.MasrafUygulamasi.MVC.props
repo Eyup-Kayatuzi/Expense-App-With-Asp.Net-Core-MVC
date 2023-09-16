@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MasrafUygulamasi.MVC.props" />
+</Project>

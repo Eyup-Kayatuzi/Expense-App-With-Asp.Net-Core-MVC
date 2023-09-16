@@ -1,0 +1,9 @@
+﻿using MasrafUygulamasi.Domain.Entities;
+
+namespace MasrafUygulamasi.Application.Interfaces.Repositories.ExpenseItemRepo
+{
+	public interface IExpenseItemReadRepository : IReadRepository<ExpenseItem>
+	{
+
+	}
+}

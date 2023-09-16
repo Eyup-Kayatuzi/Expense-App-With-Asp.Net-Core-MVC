@@ -1,0 +1,12 @@
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\bin\Debug\net6.0\MasrafUygulamasi.Domain.deps.json
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\bin\Debug\net6.0\MasrafUygulamasi.Domain.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\bin\Debug\net6.0\MasrafUygulamasi.Domain.pdb
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.csproj.AssemblyReference.cache
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.AssemblyInfoInputs.cache
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.AssemblyInfo.cs
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\refint\MasrafUygulamasi.Domain.dll
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\MasrafUygulamasi.Domain.pdb
+C:\Users\eyup.kayatuzi\Desktop\MasrafUygulamasi\MasrafUygulamasi\MasrafUygulamasi.Domain\obj\Debug\net6.0\ref\MasrafUygulamasi.Domain.dll

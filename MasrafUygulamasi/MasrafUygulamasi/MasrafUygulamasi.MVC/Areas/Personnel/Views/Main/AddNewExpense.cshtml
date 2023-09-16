@@ -1,0 +1,176 @@
+﻿@using MasrafUygulamasi.MVC.Areas.Personnel.ViewModels;
+@model AddExpenseVM
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<form asp-action="AddNewExpense" method="post">
+			<div class="row d-flex justify-content-center">
+				<div class="col-6">
+					<div class="form-group">
+						<label asp-for="CurrencyType">Currency</label>
+						<select class="form-control bg-white" asp-for="CurrencyType" asp-items="@Model.Currencies"></select>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label asp-for="TitleName">Title</label>
+						<input type="text" maxlength="50" class="form-control" asp-for="TitleName" placeholder="Title" />
+					</div>
+					<input id="totalPrice" asp-for="TotalPrice" type="hidden" value="0" />
+				</div>
+				<div class="col-12 mt-5 table-responsive">
+					<table id="expenseItemsTable" class="table table-primary">
+						<thead>
+							<tr>
+								<th scope="col">ExpenseType</th>
+								<th scope="col">ExpenseDescription</th>
+								<th scope="col">Price</th>
+								<th scope="col">ExpenseDate</th>
+							</tr>
+						</thead>
+						<tbody>
+							@for (int i = 0; i < Model.ExpenseItems.Count(); i++)
+							{
+								<tr>
+									<td>
+										<select class="form-control bg-white" asp-for="ExpenseItems[i].ExpenseType">
+											@foreach (var opt in Model.ExpenseTypes)
+											{
+												<option value="@opt">@opt</option>
+											}
+
+										</select>
+									</td>
+									<td>
+										<input type="text" class="form-control" asp-for="ExpenseItems[i].ExpenseDescription" placeholder="Add some note" maxlength="50" />
+									</td>
+									<td>
+										<input oninput="updateTotalPrice()" type="number" min="0" max="5000" step="0.01" required="required" class="form-control forDynamicPriceCal" asp-for="ExpenseItems[i].Price" placeholder="Max 5000" />
+									</td>
+									<td>
+										<input type="date" class="form-control" asp-for="ExpenseItems[i].ExpenseDate" onclick="adjustDateInput(this)" />
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+					<div class="d-flex mt-4 justify-content-between">
+						<div>
+							<button class="btn btn-success" type="button" onclick="addNewRow()">Add Row</button>
+
+							<button class="btn btn-danger" type="button" onclick="romoveNewRow()" id="deleteButton">Delete Row</button>
+						</div>
+						<div>
+							<label><strong>Total Cost:</strong></label>
+							<span id="visibleTotalPrice">0</span>
+						</div>
+					</div>
+					<div asp-validation-summary=All class="text-danger mt-2">
+					</div>
+				</div>
+
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+
+		//var rowCount = 0;
+		var rowCount = @Model.ExpenseItems.Count();
+		var expenseTypes = @Html.Raw(Json.Serialize(Model.ExpenseTypes));
+
+		function addNewRow() {
+			let newRow = `
+										<tr>
+													<td>
+												<select class="form-control bg-white" name="ExpenseItems[${rowCount}].ExpenseType">
+													 ${generateSelectOptions()}
+										</select>
+									</td>
+									<td>
+													<input type="text" class="form-control" name="ExpenseItems[${rowCount}].ExpenseDescription" placeholder="Add some note" maxlength="50" />
+													</td>
+													<td>
+																								<input oninput="updateTotalPrice()" type="number" min="0" max="5000" step="0.01" required="required" class="form-control forDynamicPriceCal" name="ExpenseItems[${rowCount}].Price" placeholder="Max 5000" />
+													</td>
+															<td>
+														<input type="date" class="form-control" name="ExpenseItems[${rowCount}].ExpenseDate" onclick="adjustDateInput(this)" />
+													</td>
+											</tr>
+														`;
+			rowCount++;
+			console.log(rowCount);
+			const deleteButton = document.getElementById("deleteButton");
+			deleteButton.disabled = rowCount <= 1;
+			$("#expenseItemsTable tbody").append(newRow);
+		}
+		function adjustDateInput(dateInput) {
+			var today = new Date().toISOString().split('T')[0];
+			dateInput.setAttribute("max", today);
+		}
+		function romoveNewRow() {
+			const deleteButton = document.getElementById("deleteButton");
+			if (rowCount > 1) {
+				--rowCount;
+				console.log(rowCount);
+			}
+			else {
+				//alert("Please add new item");
+				console.log(rowCount);
+			}
+
+			deleteButton.disabled = rowCount <= 1;
+			$("#expenseItemsTable tbody tr:last").remove();
+			updateTotalPrice();
+		}
+		function generateSelectOptions() {
+			var selectOptions = "";
+			for (var i = 0; i < expenseTypes.length; i++) {
+				var option = expenseTypes[i];
+				selectOptions += `<option value="${option}">${option}</option>`;
+			}
+			return selectOptions;
+		}
+		$(document).ready(function () {
+			if (@Model.ExpenseItems.Count() === 0) {
+				addNewRow();
+			}
+			else{
+				updateTotalPrice();
+			}
+		});
+		function updateTotalPrice() {
+			let calculate = 0;
+			let writeToSpan = document.getElementById("visibleTotalPrice");
+			let writeForInput = document.getElementById("totalPrice");
+			const collection = document.getElementsByClassName("forDynamicPriceCal");
+			for (let x of collection) {
+				if (Number.parseFloat(x.value) && Number.parseFloat(x.value) > 0 && Number.parseFloat(x.value) < 5001) {
+					calculate += parseFloat(x.value);
+
+				}
+				else if (Number.parseFloat(x.value) > 5000) {
+					x.value = 5000;
+					calculate += 5000;
+				}
+				else if (Number.parseFloat(x.value) < 0) {
+					x.value = 0;
+				}
+				else {
+
+				}
+			}
+			calculate = calculate.toFixed(2);
+			writeToSpan.innerHTML = calculate;
+			writeForInput.value = calculate;
+		}
+
+	</script>
+}
+

@@ -1,0 +1,180 @@
+﻿@using MasrafUygulamasi.MVC.Areas.CompanyManager.ViewModels;
+@model List<List<PendingExpensesVM>>
+<div class="card overflow-hidden border-0 shadow-lg my-5">
+	<div class="card-body p-0">
+		<div class="row d-flex justify-content-center">
+			<div class="col-12 d-flex mt-4">
+				<div class="me-2">
+					<label><strong>Expense Title</strong></label>
+					<br />
+					<input type="text" maxlength="50" id="titleFilterId" onkeyup="titleFilter(0, 'titleFilterId')" placeholder="Personnel name.." title="Type in a name" class="bg-gradient">
+				</div>
+				<div>
+					<label><strong>Currency</strong></label>
+					<br />
+					<select id="titleFilterId2" onchange="titleFilter2(1, 'titleFilterId2')" class="bg-gradient">
+						<option value=""></option>
+						<option value="TL">₺</option>
+						<option value="EUR">€</option>
+						<option value="USD">$</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-12 table-responsive">
+				<table id="generalTable" class="table table-primary table-striped table-bordered">
+					<thead>
+						<tr>
+							<th scope="col" class="w-25">Personnel Name</th>
+							<th scope="col" class="w-35">Expense Forms</th>
+							<th scope="col" class="w-20">Notes</th>
+							<th scope="col" class="w-20"></th>
+						</tr>
+					</thead>
+					<tbody>
+						@{
+							foreach (var eachPersonnel in Model)
+							{
+								@foreach (var item in eachPersonnel)
+								{
+									<tr>
+										<td><h5>@item.PersonnelName</h5></td>
+										@*<td class="row">
+											<div class="mb-4 bg-primaryp-2 text-dark bg-opacity-50 "><h4 class="">@item.ExpenseTitle </h4><h5><u>@item.TotalPrice <span id="SearchCurencyType">@item.CurrencyName</span></u></h5></div>
+											@foreach (var expenseItem in item.ExpenseItemsList)
+											//{
+											//	<div class="mb-3 col-md-6 col-lg-4">
+											//		<h5>@expenseItem.ExpenseTypes</h5>
+											//		@if (expenseItem.ExpenseNotes != null)
+											//		{
+											//			@expenseItem.ExpenseNotes
+
+											//			<br />
+											//		}
+											//		else
+											//		{
+
+											//		}
+											//		@expenseItem.ExpensePrice @item.CurrencyName
+											//		<br />
+											//		@expenseItem.ExpenseDates.ToShortDateString()
+											//	</div>
+											//}
+										@*</td> *@
+										<td>
+											<div class="bg-primaryp-2 text-dark bg-opacity-50 "><h4 class="">@item.ExpenseTitle </h4><h5><u>@item.TotalPrice <span id="SearchCurencyType">@item.CurrencyName</span></u></h5></div>
+											<a class="" href="@Url.Action("FormDetails", "Main", new {id = item.ExpenseId, area = "CompanyManager"})">Click for detail</a>
+										</td>
+										<td><textarea id="managerNote@(item.ExpenseId)" maxlength="50" rows="3" cols="20" placeholder="You must add a note if it is to be rejected."></textarea></td>
+										<td>
+											<div class="d-flex justify-content-center">
+												<button class="btn btn-success" type="button" onclick="confirmApproval(@item.ExpenseId)">Confirm</button>
+												<button class="btn btn-danger" type="button" onclick="confirmDeny(@item.ExpenseId)">Reject</button>
+											</div>
+
+										</td>
+									</tr>
+								}
+							}
+						}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+	<script>
+		function titleFilter(switchVal, IdName) {
+
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById(IdName);
+			filter = input.value.toUpperCase();
+			table = document.getElementById("generalTable");
+			tr = table.getElementsByTagName("tr");
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[switchVal];
+				if (td) {
+					txtValue = td.textContent;
+					txtValue = txtValue.trim();
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+					}
+					else {
+						tr[i].style.display = "none";
+					}
+				}
+			}
+		}
+		function titleFilter2(switchVal, IdName) {
+			var input, filter, table, tr, td, i, txtValue;
+			input = document.getElementById(IdName);
+			filter = input.value.toUpperCase();
+			table = document.getElementById("generalTable");
+			tr = table.getElementsByTagName("tr");
+
+			for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[switchVal];
+
+				if (td) {
+					const currencySpan = td.querySelector("#SearchCurencyType");
+					if (currencySpan) {
+						txtValue = currencySpan.textContent; 
+						txtValue = txtValue.trim();
+						if (txtValue.toUpperCase().indexOf(filter) > -1) {
+							tr[i].style.display = "";
+						} else {
+							tr[i].style.display = "none";
+						}
+					}
+				}
+			}
+		}
+		function confirmApproval(id) {
+			var result = confirm("Do you want to APPROVE?");
+			if (result) {
+
+				$.ajax({
+					method: "POST",
+					url: "ConfirmPendingExpense",
+					data: { ExpenseId: id, ManagerNote: document.getElementById("managerNote" + id).value }
+				})
+					.done(function (msg) {
+						location.reload();
+					});
+			}
+		}
+		function confirmDeny(id) {
+			var result = confirm("Do you want to DENY?");
+			var note = document.getElementById("managerNote" + id).value;
+			if (result && note !== "") {
+
+				$.ajax({
+					method: "POST",
+					url: "RejectPendingExpense",
+					data: { ExpenseId: id, ManagerNote: note }
+				})
+					.done(function (msg) {
+						location.reload();
+					});
+			}
+			else if (note === "") {
+				alert("You must add a note if it is to be rejected.");
+			}
+			else {
+
+			}
+		}
+		@{
+			if (TempData["fromUpdatePendingExpense"] != null)
+			{
+				<text>
+					alert(`An error occurred while updateding`);
+				</text>
+			}
+
+		}
+	</script>
+}
